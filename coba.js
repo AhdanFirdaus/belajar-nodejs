@@ -18,7 +18,14 @@ class Orang {
   }
 }
 
-module.exports.cetakNama = cetakNama;
-module.exports.PI = PI;
-module.exports.mahasiswa = mahasiswa;
-module.exports.Orang = Orang;
+// module.exports.cetakNama = cetakNama;
+// module.exports.PI = PI;
+// module.exports.mahasiswa = mahasiswa;
+// module.exports.Orang = Orang;
+
+module.exports = {
+  cetakNama: cetakNama,
+  PI: PI,
+  mahasiswa: mahasiswa,
+  Orang: Orang,
+}
