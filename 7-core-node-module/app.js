@@ -2,4 +2,8 @@
 const fs = require('node:fs');
 
 // menuliskan string ke file (synchronous)
-fs.writeFileSync('test.txt', 'hello world secara synchronous')
+try {
+  fs.writeFileSync('data/test.txt', 'hello world secara synchronous')
+} catch (e) {
+  console.log(e);
+}
