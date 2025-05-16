@@ -16,4 +16,4 @@ const fs = require('node:fs');
 
 // membaca isi file (synchronous) 
 const data = fs.readFileSync('data/test.txt');
-console.log(data);
+console.log(data.toString());
