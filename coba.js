@@ -12,6 +12,13 @@ const mahasiswa = {
   }
 }
 
+class Orang {
+  constructor() {
+    console.log('Object orang telah dibuat!!');
+  }
+}
+
 module.exports.cetakNama = cetakNama;
 module.exports.PI = PI;
 module.exports.mahasiswa = mahasiswa;
+module.exports.Orang = Orang;
