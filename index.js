@@ -2,6 +2,7 @@
 // const cetakNama = (nama) => `Hi, nama saya ${nama}`;
 // console.log(cetakNama('ahdan firdaus'))
 
-require('./coba')
+const cetakNama = require('./coba')
 
-console.log('hello dadan')
+// console.log('hello dadan')
+console.log(cetakNama('dadan'));
