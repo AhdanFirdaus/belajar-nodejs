@@ -13,4 +13,4 @@
 // console.log(PI);
 const coba = require('./coba') // object
 // console.log(coba); // { cetakNama: [Function: cetakNama], PI: 3.14 }
-console.log(coba.cetakNama('ahdan'), coba.PI)
+console.log(coba.cetakNama('ahdan'), coba.PI, coba.mahasiswa.cetakMhs())
