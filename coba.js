@@ -23,9 +23,11 @@ class Orang {
 // module.exports.mahasiswa = mahasiswa;
 // module.exports.Orang = Orang;
 
-module.exports = {
-  cetakNama: cetakNama,
-  PI: PI,
-  mahasiswa: mahasiswa,
-  Orang: Orang,
-}
+// module.exports = {
+//   cetakNama: cetakNama,
+//   PI: PI,
+//   mahasiswa: mahasiswa,
+//   Orang: Orang,
+// }
+
+module.exports = {cetakNama, PI, mahasiswa, Orang};
