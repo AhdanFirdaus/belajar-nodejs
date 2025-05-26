@@ -7,6 +7,7 @@ npm init
 Perintah ini digunakan untuk menginisialisasi project Node.js. Ini akan membuat file `package.json` yang berisi informasi tentang project, seperti nama, versi, deskripsi, entry point, dan dependencies.
 
 ## 📥 Instalasi Package
+**Instalasi versi terbaru**
 ```sh
 npm install <package>
 ```
@@ -14,11 +15,21 @@ Atau singkatnya:
 ```sh
 npm i <package>
 ```
-Digunakan untuk menginstal package dari NPM dan menyimpannya sebagai dependensi di node_modules serta mencatatnya di `package.json`.
+Perintah ini akan menginstal versi terbaru yang stabil dari package dan menyimpannya ke dalam folder `node_modules`, serta mencatatnya di file `package.json`.
 Contoh:
 ```sh
 npm i validator
 ```
+**Instalasi versi tertentu**
+```sh
+npm install <package>@<versi>
+```
+Digunakan saat kamu ingin menginstal **versi tertentu** dari suatu package.
+Contoh:
+```sh
+npm i validator@13.5.2
+```
+Artinya kamu akan menginstal package `validator` versi **13.5.2** — cocok untuk menjaga konsistensi proyek dan menghindari bug akibat perubahan versi di masa depan.
 
 ## ❌ Uninstall Package
 ```sh
