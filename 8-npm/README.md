@@ -68,3 +68,41 @@ Contoh:
 ```sh
 npm run dev
 ```
+## 🚀 Instalasi Global (`-g`)
+```sh
+npm install -g nodemon
+```
+Perintah ini menginstal `nodemon` secara global, artinya bisa digunakan di semua proyek Node.js tanpa harus install ulang setiap kali.
+
+## ❌ Uninstall Global
+```sh
+npm uninstall -g nodemon
+```
+Digunakan untuk menghapus package `nodemon` dari global environment.
+
+## 🛠️ Instalasi sebagai Dev Dependency (`--save-dev`)
+```sh
+npm install --save-dev nodemon
+```
+Perintah ini menginstal `nodemon` sebagai **dev dependency**, yaitu hanya digunakan saat **pengembangan (development)**, bukan untuk produksi.
+Package ini akan dicatat di bagian `devDependencies` pada `package.json`, contohnya:
+```json
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+```
+Penggunaan:
+Biasanya dibuatkan script di `package.json` seperti ini:
+```json
+ "scripts": {
+    "start": "nodemon app"
+ }
+```
+Lalu jalankan dengan:
+```sh
+npm start
+```
+kalau dev 
+```sh
+npm run dev
+```
