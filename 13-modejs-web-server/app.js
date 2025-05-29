@@ -26,8 +26,7 @@ http
     if (url === "/about") {
       renderHTML("./about.html", res);
     } else if (url === "/contact") {
-      res.write("<h1>Ini adalah halaman contact</h1>");
-      res.end();
+      renderHTML("./contact.html", res);
     } else {
       // res.write("<h1>Hello World!</h1>");
       renderHTML("./index.html", res);
