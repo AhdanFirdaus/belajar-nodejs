@@ -46,7 +46,7 @@ const simpanContact = (nama, email, noHP) => {
 
   fs.writeFileSync("data/contacts.json", JSON.stringify(contacts));
 
-  console.log("Terimakasih sudah memsukkan data.");
+  console.log(chalk.green.inverse.bold("Terimakasih sudah memasukkan data."));
 };
 
 module.exports = { simpanContact };
