@@ -1,6 +1,5 @@
 const http = require("http");
 const fs = require("fs");
-const { execPath } = require("process");
 
 const port = 3000;
 
