@@ -1,5 +1,5 @@
 const yargs = require("yargs");
-const { simpanContact, listContact } = require("./contacts");
+const { simpanContact, listContact, detailContact } = require("./contacts");
 
 yargs
   .command({
@@ -34,6 +34,22 @@ yargs.command({
   describe: "Menampilkan semua nama dan no HP contact",
   handler() {
     listContact();
+  },
+});
+
+// menampilkan detail sebuah contact
+yargs.command({
+  command: "detail",
+  describe: "Menampilkan detail sebuah contact berdasarkan nama",
+  builder: {
+    nama: {
+      describe: "Nama Lengkap",
+      demandOption: true,
+      type: "string",
+    },
+  },
+  handler(argv) {
+    detailContact(argv.nama);
   },
 });
 
