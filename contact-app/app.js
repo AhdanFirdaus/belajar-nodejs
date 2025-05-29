@@ -1,5 +1,10 @@
 const yargs = require("yargs");
-const { simpanContact, listContact, detailContact } = require("./contacts");
+const {
+  simpanContact,
+  listContact,
+  detailContact,
+  deleteContact,
+} = require("./contacts");
 
 yargs
   .command({
@@ -50,6 +55,22 @@ yargs.command({
   },
   handler(argv) {
     detailContact(argv.nama);
+  },
+});
+
+// menghapus contact berdasarkan nama
+yargs.command({
+  command: "delete",
+  describe: "Menghapus sebuah contact berdasarkan nama",
+  builder: {
+    nama: {
+      describe: "Nama Lengkap",
+      demandOption: true,
+      type: "string",
+    },
+  },
+  handler(argv) {
+    deleteContact(argv.nama);
   },
 });
 
