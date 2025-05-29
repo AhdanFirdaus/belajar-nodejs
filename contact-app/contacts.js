@@ -36,6 +36,12 @@ const simpanContact = (nama, email, noHP) => {
     }
   }
 
+  // cek no HP
+  if (!validator.isMobilePhone(noHP, 'id-ID')) {
+    console.log(chalk.red.inverse.bold("Nomor Handphone tidak valid!"));
+    return false;
+  }
+
   contacts.push(contact);
 
   fs.writeFileSync("data/contacts.json", JSON.stringify(contacts));
