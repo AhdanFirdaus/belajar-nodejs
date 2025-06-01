@@ -3,11 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nodejs Web Server</title>
+  <title><%= title %></title>
 </head>
 <body>
-  <% const nama = 'Ahdan Firdaus' %>
   <h1>Web Server NODEJS</h1>
   <h2>Halo <%= nama %></h2>
+
+  <h4>Daftar Mahasiswa</h4>
+  <% mahasiswa.forEach(mhs => { %>
+    <ul>
+      <li>Nama: <%= mhs.nama %></li>
+      <li>Email: <%= mhs.email %></li>
+    </ul>
+  <% }) %>
+
 </body>
 </html>

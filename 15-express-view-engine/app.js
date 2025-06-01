@@ -3,22 +3,42 @@ const app = express();
 const port = 3000;
 
 // gunakan ejs
-app.set('view engine', 'ejs')
+app.set("view engine", "ejs");
 
 app.get("/", (req, res) => {
-  res.render('index')
+  const mahasiswa = [
+    {
+      nama: "dadan",
+      email: "dadan@gmail.com",
+    },
+    {
+      nama: "rangki",
+      email: "rangki@gmail.com",
+    },
+    {
+      nama: "rakuu",
+      email: "rakuu@gmail.com",
+    },
+  ];
+  res.render("index", 
+    { nama: "Ahdan Firdaus", 
+      title: "Halaman Home",
+      mahasiswa
+    });
 });
 
 app.get("/about", (req, res) => {
-  res.render('about')
+  res.render("about");
 });
 
 app.get("/contact", (req, res) => {
-  res.render('contact')
+  res.render("contact");
 });
 
 app.get("/product/:id", (req, res) => {
-  res.send(`Product ID : ${req.params.id} <br> Category ID : ${req.query.category}`);
+  res.send(
+    `Product ID : ${req.params.id} <br> Category ID : ${req.query.category}`
+  );
 });
 
 app.use("/", (req, res) => {
