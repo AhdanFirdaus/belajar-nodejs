@@ -6,15 +6,15 @@ const port = 3000;
 app.set('view engine', 'ejs')
 
 app.get("/", (req, res) => {
-  res.sendFile("./index.html", { root: __dirname });
+  res.render('index')
 });
 
 app.get("/about", (req, res) => {
-  res.sendFile("./about.html", { root: __dirname });
+  res.render('about')
 });
 
 app.get("/contact", (req, res) => {
-  res.sendFile("./contact.html", { root: __dirname });
+  res.render('contact')
 });
 
 app.get("/product/:id", (req, res) => {
