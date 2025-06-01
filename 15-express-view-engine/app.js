@@ -2,23 +2,18 @@ const express = require("express");
 const app = express();
 const port = 3000;
 
+// gunakan ejs
+app.set('view engine', 'ejs')
+
 app.get("/", (req, res) => {
-  // res.send("<h1>Hello World!</h1>");
-  // res.json({
-  //   nama: "ahdan",
-  //   email: "ahdan@gmail.com",
-  //   noHP: "0812312312",
-  // });
   res.sendFile("./index.html", { root: __dirname });
 });
 
 app.get("/about", (req, res) => {
-  // res.send("ini adalah halaman about");
   res.sendFile("./about.html", { root: __dirname });
 });
 
 app.get("/contact", (req, res) => {
-  // res.send("ini adalah halaman contact");
   res.sendFile("./contact.html", { root: __dirname });
 });
 
